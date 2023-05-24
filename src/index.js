@@ -28,7 +28,7 @@ const Tabs = createMaterialBottomTabNavigator();
 
 function TabsNavigation() {
   return (
-    <Tabs.Navigator initialRouteName="LoginScreen" style={styles.menuzin} barStyle={{ backgroundColor: "#415A77" }} activeColor="#000000" inactiveColor="#FFFFFF">
+    <Tabs.Navigator initialRouteName="LoginScreen" style={styles.menuzin} barStyle={{ backgroundColor: "#415A77" }} activeColor="#FFFFFF" inactiveColor="#FFFFFF">
       <Tabs.Screen
         name="HomeScreen"
         component={HomeScreen}

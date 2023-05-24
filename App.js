@@ -10,6 +10,7 @@ import ProdutoScreen from "./src/screens/ProdutoScreen";
 import FilmeScreen from "./src/screens/FilmeScreen";
 import CarroScreen from "./src/screens/CarroScreen";
 import JogoScreen from "./src/screens/JogoScreen";
+import { View } from "react-native-web";
 
 const Stack = createNativeStackNavigator();
 
@@ -37,8 +38,8 @@ function TabsNavigation() {
       initialRouteName="LoginScreen"
       style={styles.menuzin}
       barStyle={{ backgroundColor: "#415A77" }}
-      activeColor="#000000"
-      inactiveColor="#FFFFFF"
+      activeColor="#000"
+      inactiveColor="#000"
     >
       <Tabs.Screen
         name="HomeScreen"
@@ -55,6 +56,9 @@ function TabsNavigation() {
         component={AnimalScreen}
         options={{
           tabBarLabel: "Animal",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="bird" color={color} size={26} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -62,6 +66,9 @@ function TabsNavigation() {
         component={AnimeScreen}
         options={{
           tabBarLabel: "Anime",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="television" color={color} size={26} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -69,6 +76,9 @@ function TabsNavigation() {
         component={CarroScreen}
         options={{
           tabBarLabel: "Carro",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="car" color={color} size={26} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -76,6 +86,9 @@ function TabsNavigation() {
         component={FilmeScreen}
         options={{
           tabBarLabel: "Filme",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="movie" color={color} size={26} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -83,6 +96,9 @@ function TabsNavigation() {
         component={JogoScreen}
         options={{
           tabBarLabel: "Jogo",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="game" color={color} size={26} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -90,6 +106,9 @@ function TabsNavigation() {
         component={ProdutoScreen}
         options={{
           tabBarLabel: "Fruta",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="apple" color={color} size={26} />
+          ),
         }}
       />
     </Tabs.Navigator>
